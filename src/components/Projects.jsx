@@ -1,14 +1,6 @@
 function Projects() {
   const projects = [
-    {
-      title: "IFEOLUWA Website",
-      description:
-        "A modern product website built for a chemical and household products business, with product browsing and WhatsApp ordering.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
-      link: "https://ifeoluwa-chemical-llxd.vercel.app/",
-      image: "/ifeoluwa-dashboard.png",
-    },
-    {
+      {
       title: "SahidMovie Likes",
       description:
         "A movie discovery and watchlist platform where users can search for Studio Ghibli films, like movies, view details, and build their personal watchlist.",
@@ -23,6 +15,14 @@ function Projects() {
       tech: ["React", "Tailwind CSS", "JavaScript"],
       link: "https://music-lyrics-anime-promo.vercel.app/",
       image: "/music-promo.png",
+    },
+    {
+      title: "IFEOLUWA Website",
+      description:
+        "A modern product website built for a chemical and household products business, with product browsing and WhatsApp ordering.",
+      tech: ["React", "Tailwind CSS", "JavaScript"],
+      link: "https://ifeoluwa-chemical-llxd.vercel.app/",
+      image: "/ifeoluwa-dashboard.png",
     },
   ];
 
