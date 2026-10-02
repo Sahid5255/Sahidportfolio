@@ -93,7 +93,7 @@ function Contact() {
                 className="mt-2 inline-flex items-center gap-2 text-lg font-medium text-green-400 transition hover:text-green-300"
               >
                 Chat with me on WhatsApp
-                <span>↗</span>
+                <span></span>
               </a>
             </div>
 
@@ -105,7 +105,7 @@ function Contact() {
               className="mt-8 inline-flex w-fit items-center gap-2 rounded-xl bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-400"
             >
               WhatsApp Me
-              <span>↗</span>
+              <span></span>
             </a>
           </div>
 
