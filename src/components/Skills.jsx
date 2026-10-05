@@ -25,7 +25,37 @@ function Skills() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        {/* Mobile - Moving Skills */}
+        <div className="relative overflow-hidden sm:hidden">
+          <div className="flex w-max animate-skill-scroll">
+            {/* First set */}
+            <div className="flex gap-4 pr-4">
+              {skills.map((skill) => (
+                <div
+                  key={`first-${skill}`}
+                  className="whitespace-nowrap rounded-xl border border-slate-800 bg-slate-900 px-6 py-4 font-medium"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+
+            {/* Duplicate set for seamless loop */}
+            <div className="flex gap-4 pr-4">
+              {skills.map((skill) => (
+                <div
+                  key={`second-${skill}`}
+                  className="whitespace-nowrap rounded-xl border border-slate-800 bg-slate-900 px-6 py-4 font-medium"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop - Normal Grid */}
+        <div className="hidden gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {skills.map((skill) => (
             <div
               key={skill}
@@ -36,8 +66,27 @@ function Skills() {
           ))}
         </div>
       </div>
+
+      {/* Mobile animation */}
+      <style>
+        {`
+          @keyframes skillScroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-skill-scroll {
+            animation: skillScroll 20s linear infinite;
+          }
+        `}
+      </style>
     </section>
   );
 }
 
 export default Skills;
+
